@@ -1,6 +1,6 @@
 # open-reqs
 
-Tool for searching open job reqs on `jobs.apple.com`. Runs multi-query, scored, deduplicated candidate searches from the command line or a local web UI — no scraping, no third-party services. 100% of the code is written by Claude through directed prompting by Brooke Ryan, using a personal [Claude Max](https://claude.ai/upgrade) plan.
+Tool for searching open job reqs on `jobs.apple.com`. Runs multi-query, scored, deduplicated candidate searches from the command line or a local web UI — no scraping, no third-party services. 100% of the code is written by Claude through directed prompting by Alice, using a personal [Claude Max](https://claude.ai/upgrade) plan.
 
 ---
 
@@ -79,7 +79,7 @@ Run a multi-query, scored, deduplicated search from the command line.
 python3 open_reqs.py --candidate
 
 # Use a specific profile
-python3 open_reqs.py --candidate --profile profiles/brooke_ryan_profile.yaml
+python3 open_reqs.py --candidate --profile profiles/alice_profile.yaml
 
 # Limit results and export JSON
 python3 open_reqs.py --candidate --limit 50 --json
@@ -92,7 +92,7 @@ python3 open_reqs.py --candidate --email user@example.com --cc contact@example.c
 
 | File | Candidate | Target level | Locations |
 |------|-----------|-------------|-----------|
-| `profiles/brooke_ryan_profile.yaml` | Brooke Ryan | Senior / experienced | SCV, SVL, SJOS |
+| `profiles/alice_profile.yaml` | Alice | Senior / experienced | SCV, SVL, SJOS |
 
 Profile YAML fields:
 
@@ -122,7 +122,7 @@ Each candidate has a workflow that can run the search and optionally email resul
 
 | Workflow | File | Schedule |
 |----------|------|----------|
-| Brooke's Job Search | `.github/workflows/brooke-ryan-job-search.yml` | Daily at 7:00 AM PT + manual |
+| Alice's Job Search | `.github/workflows/alice-job-search.yml` | Daily at 7:00 AM PT + manual |
 
 When triggered manually, a dropdown lets you choose the email recipient (candidate, referrer, or none).
 
